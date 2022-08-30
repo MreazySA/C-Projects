@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="NewUltimateFE.Site3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+ <link rel="stylesheet" href="background_styles.css">
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+
+    <title></title>
+  <style>
+      .align{
+          text-align:center;
+         
+      }
+  </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                        <nav class="navbar" style="background-color:white">
+        <div class="brand-title"><a href="HomePage.aspx"><img src="pictures/logo.png" style="width:97px"></a></div>
+        <a href="#" class="toggle-button" style="background-color:black">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links" >
+          <ul>
+            <li><a href="Login.aspx" id="login" runat="server" style="color:black">Login</a></li>
+            <li><a href="Register.aspx" id="register" runat="server" style="color:black">Register</a></li>
+            <li><a href="Driver.aspx" id="deliver" runat="server" visible="false" style="color:black">Become a Deliver</a></li>
+              <li><a href="Profile.aspx" id="profile" runat="server" visible="false" style="color:black">Profile</a></li>
+            <li><a href="Logout.aspx" id="logout" runat="server" visible="false" style="color:black">Logout</a></li>
+              <li><a href="Dashboard.aspx" id="Dash" runat="server" visible="false" style="color:black">Dashboard</a></li>
+
+          </ul>
+        </div>
+      </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               </asp:ContentPlaceHolder>
+    
+    <div class="align">
+        <p>Proudly created by Mreazy</p>
+    </div>
+        </div>
+    </form>
+</body>
+</html>

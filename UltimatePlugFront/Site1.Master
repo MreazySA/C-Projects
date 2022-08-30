@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="UtlimatePlug_FrontEnd.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+      <link rel="stylesheet" href="background_styles.css">
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+      <nav class="navbar">
+        <div class="brand-title">Brand Name</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="Login.aspx" id="login" runat="server">Login</a></li>
+            <li><a href="Register.aspx" id="register" runat="server">Register</a></li>
+            <li><a href="Products.aspx" id="services" runat="server">Products</a></li>
+            <li><a href="Logout.aspx" id="logout" runat="server">Logout</a></li>
+              <li><a href="Dashboard.aspx" id="Dash" runat="server">Dashboard</a></li>
+
+          </ul>
+        </div>
+      </nav>
+          
+        </div>
+    </form>
+</body>
+</html>
