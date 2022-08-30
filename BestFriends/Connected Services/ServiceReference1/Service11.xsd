@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService10" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService10" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TempData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Card_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Confirm_Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Offer_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Offer_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Offer_Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Offer_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Offer_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pet_Breed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pet_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pet_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Pet_Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pet_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pet_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pet_Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Pet_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Province_State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip_Code" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TempData" nillable="true" type="tns:TempData" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Confirm_Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="First_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Last_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfInvoice1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Invoice1" nillable="true" type="tns:Invoice1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoice1" nillable="true" type="tns:ArrayOfInvoice1" />
+  <xs:complexType name="Invoice1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Card_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="First_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Last_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pet_Breed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pet_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Pet_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pet_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pet_Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Pet_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Province_State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZIP_Code" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Invoice1" nillable="true" type="tns:Invoice1" />
+</xs:schema>

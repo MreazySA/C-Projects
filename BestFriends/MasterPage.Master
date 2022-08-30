@@ -1,0 +1,220 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BestFriends.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Best Friends.</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
+    <link rel="shortcut icon" href="./img/logo.png">
+	<meta name="author" content="CodePixar">
+	<meta name="description" content="">
+    <meta name="keywords" content="footer, address, phone, icons" />
+
+	<!-- ============================================
+	                      CSS
+	============================================= -->
+	 <link rel="stylesheet" href="css/linearicons.css">
+	 <link rel="stylesheet" href="css/owl.carousel.css">
+	 <link rel="stylesheet" href="css/themify-icons.css">
+	 <link rel="stylesheet" href="css/font-awesome.min.css">
+	 <link rel="stylesheet" href="css/nice-select.css">
+	 <link rel="stylesheet" href="css/nouislider.min.css">
+	 <link rel="stylesheet" href="css/bootstrap.css">
+
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	 <link rel="stylesheet" href="css/main.css">
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+	    <!-- Inheriting pages use this -->
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Start Header Area -->
+	<header class="header_area sticky-header">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light main_box">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="Home.aspx"><img src="./img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" runat="server">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+                            <!-- Home -->
+							<li class="nav-item"><a class="nav-link" id="homeID" href="Home.aspx" runat="server">
+                                Home
+							</a></li>
+
+                            <!-- Catalog -->
+                            <li class="nav-item submenu dropdown" runat="server" id="shopID"  visible="true">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false" runat="server">Shop</a>
+								<ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="Cats.aspx" id="catBtn" runat="server" visible ="true">
+                                        Cats
+                                    </a></li>
+									<li class="nav-item"><a class="nav-link" href="Dogs.aspx" id="dogBtn" runat="server" visible ="true">
+                                        Dogs
+									</a></li>
+								</ul>
+							</li>
+
+                            <!-- User -->
+                            <li class="nav-item submenu dropdown" runat="server" id="userID" visible="true">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false" runat="server">User</a>
+								<ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="Login.aspx" id="loginBtn" runat="server" visible ="true">
+                                        Login
+                                    </a></li>
+									<li class="nav-item"><a class="nav-link" href="Register.aspx" id="regBtn" runat="server" visible ="true">
+                                        Register
+									</a></li>
+									<li class="nav-item"><a class="nav-link" href="Logout.aspx" id="logoutBtn" runat="server" visible ="false">
+                                        Sign Out
+									</a></li>
+								</ul>
+							</li>
+
+							<!-- Contact -->
+							<li class="nav-item"><a class="nav-link" id="A1" href="Contact.aspx" runat="server">
+                                Contact
+							</a></li>
+
+                            <!-- Admin/Manager -->
+							<li class="nav-item submenu dropdown" runat="server" id="prodID" visible="false">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false" runat="server">Management</a>
+								<ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="AddPet.aspx" id="addP" runat="server">
+                                        Add New Pet
+                                    </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="AddOffer.aspx" id="addO" runat="server">
+                                        Add New Offer
+                                    </a></li>
+									<li class="nav-item"><a class="nav-link" href="AddUser.aspx" id="addtU" runat="server" visible ="false">
+                                        Add New User
+									</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="UpdateOffer.aspx" id="updateO" runat="server">
+                                        Update Offer
+									</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="UpdatePet.aspx" id="updateP" runat="server">
+                                        Update Pet
+									</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="UpdateUser.aspx" id="updateU" runat="server" visible ="false">
+                                        Update User
+                                    </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="ReportsPage.aspx" id="report" runat="server" visible ="false">
+                                        View Records
+                                    </a></li>
+								</ul>
+							</li>
+						</ul>
+
+                        <!-- Cart and Search -->
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item submenu dropdown" id="CartButton" runat="server" >
+                                <a href="Cart.aspx" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false" runat="server">
+                                    <span class="ti-bag"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li  class="nav-item" ><a href="Cart.aspx" class="nav-link" ><p  id ="cart_items" runat="server"> </p></a></li>
+                                    <li  class="nav-item" ><a href="Cart.aspx" class="nav-link" ><p  id ="cart_total" runat="server"> </p></a></li>
+                                 </ul>
+                             </li>
+							<li class="nav-item"><a class="nav-link" id="search" href="Search.aspx" runat="server">
+                                <span class="lnr lnr-magnifier"></span>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <!-- Inheriting pages use this part -->
+        </asp:ContentPlaceHolder>
+    </div>
+     
+    <!-- Start Footer Area -->
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+				<h3>Best<span>Friends.</span></h3>
+				<p class="footer-links">
+					<a href="Home.aspx">Home</a>
+					·
+					<a href="Cats.aspx">Cats</a>
+					·
+                    <a href="Dogs.aspx">Dogs</a>
+					·
+					<a href="Search.aspx">Search</a>
+				</p>
+				<br />
+				<br />
+				<p class="footer-company-name">IT Innovative Solutions &copy; 2019</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="lnr lnr-home"></i>
+					<p><span>University Rd.</span> Johannesburg, South Africa</p>
+				</div>
+                <br />
+				<div>
+					<i class="lnr lnr-phone-handset"></i>
+					<p>+011 555 1234</p>
+				</div>
+                <br />
+				<div>
+					<i class="lnr lnr-envelope"></i>
+					<p><a href="bof@company.com">bestOfFriends@gmail.com</a></p>
+				</div>
+			</div>
+
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Our company offers the best access to products and services to be offered in South Africa.
+				</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+		</footer>
+    <!-- End Footer Area -->
+
+    <!-- Scripts -->
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/countdown.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
